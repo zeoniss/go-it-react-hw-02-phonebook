@@ -29,7 +29,4 @@
   cursor: pointer;
   background-color: grey;
   border: 1px solid white;
-  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  outline: transparent;
 }

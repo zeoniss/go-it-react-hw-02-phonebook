@@ -47,6 +47,7 @@ class ContactForm extends Component {
             id={this.nameInputId}
             type="text"
             name="name"
+            placeholder="Enter contact name"
             className={s.contactForm_input}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
@@ -62,6 +63,7 @@ class ContactForm extends Component {
             id={this.telInputId}
             type="tel"
             name="number"
+            placeholder="Enter contact phone"
             className={s.contactForm_input}
             pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
             title="Номер телефона должен состоять из 11-12 цифр и может содержать цифры, пробелы, тире, пузатые скобки и может начинаться с +"

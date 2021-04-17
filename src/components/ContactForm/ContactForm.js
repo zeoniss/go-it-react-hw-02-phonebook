@@ -11,17 +11,19 @@ class ContactForm extends Component {
     number: '',
   };
 
-  inputChange = event => {
-    const inputName = event.currentTarget.name;
+  changeInput = e => {
+    const inputName = e.currentTarget.name;
     this.setState({
-      [inputName]: event.currentTarget.value,
+      [inputName]: e.currentTarget.value,
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
+  handleFormSubmit = e => {
+    e.preventDefault();
     const checkContact = Boolean(
-      this.props.existContacts.find(el => el.name === this.state.name),
+      this.props.existContacts.find(
+        element => element.name === this.state.name,
+      ),
     );
 
     checkContact
@@ -40,12 +42,11 @@ class ContactForm extends Component {
     return (
       <form onSubmit={this.handleFormSubmit} className={s.contactForm}>
         <label htmlFor={this.nameInputId} className={s.contactForm_label}>
-          <span className={s.contactForm_title}>Name </span>
+          <span className={s.contactForm_title}>Name:</span>
           <input
             id={this.nameInputId}
             type="text"
             name="name"
-            placeholder="Enter contact name"
             className={s.contactForm_input}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
@@ -55,19 +56,18 @@ class ContactForm extends Component {
           />
         </label>
 
-        <label htmlFor={this.telInputId} className={s.contactForm__label}>
-          <span className={s.contactForm_title}> Phone number</span>
+        <label htmlFor={this.telInputId} className={s.contactForm_label}>
+          <span className={s.contactForm_title}> Phone:</span>
           <input
             id={this.telInputId}
             type="tel"
             name="number"
-            placeholder="Enter phone number"
             className={s.contactForm_input}
             pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
             title="Номер телефона должен состоять из 11-12 цифр и может содержать цифры, пробелы, тире, пузатые скобки и может начинаться с +"
             value={number}
             required
-            onChange={this.inputChange}
+            onChange={this.changeInput}
           />
         </label>
         <button type="submit" className={s.contactForm_button}>

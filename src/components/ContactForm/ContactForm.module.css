@@ -1,0 +1,38 @@
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contactForm_label {
+  display: block;
+  flex-basis: calc(100% / 2 - 20px);
+  margin-bottom: 20px;
+}
+.contactForm_input {
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid purple;
+  font-size: 18px;
+}
+
+.contactForm_title {
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+.contactForm_button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background-color: purple;
+  border: transparent;
+  border-radius: 10px;
+  outline: transparent;
+}

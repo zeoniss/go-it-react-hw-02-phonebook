@@ -5,7 +5,7 @@
 }
 .contactForm_label {
   display: block;
-  flex-basis: calc(100% / 2 - 20px);
+
   margin-bottom: 20px;
 }
 .contactForm_input {
